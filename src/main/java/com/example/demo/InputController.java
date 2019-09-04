@@ -21,6 +21,11 @@ public class InputController{
         System.out.println(code);
         
         // 入力フォーマットの確認
+//        if (code == null || code.equals("")) {
+//            model.addAttribute("errorMessage", "郵便番号を入力してください。");
+//            return zipcodeForm(session, model);
+//        }
+
         
         
         return null;
