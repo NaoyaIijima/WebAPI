@@ -1,4 +1,4 @@
-nputpackage com.example.demo;
+package com.example.demo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +13,18 @@ public class InputController{
     @GetMapping("/input")
     public String getInput(){
         return "input";
+    }
+    
+    @PostMapping
+    public String postRequest(@RequestParam("text1") String code, Model model){
+        
+        System.out.println(code);
+        
+        // 入力フォーマットの確認
+        
+        
+        return null;
+        
     }
     
 }
