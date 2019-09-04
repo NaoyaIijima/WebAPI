@@ -23,20 +23,12 @@ public class InputController{
     public String postRequest(@RequestParam("text1") String code, Model model){
         
         System.out.println(code);
-        
-//        System.out.println(inputService.service(code).getResults());
-        zipCodeDto = inputService.service(code);
-        System.out.println(zipCodeDto.getResults());
-        
-        // 入力フォーマットの確認
-//        if (code == null || code.equals("")) {
-//            model.addAttribute("errorMessage", "郵便番号を入力してください。");
-//            return zipcodeForm(session, model);
-//        }
 
+        zipCodeDto = inputService.service(code);
         
+        model.addAttribute("data", zipCodeDto.getResults());
         
-        return null;
+        return "show";
         
     }
     
