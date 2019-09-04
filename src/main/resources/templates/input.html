@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>郵便番号入力画面</title>
 </head>
 <body>
-
+    <h1>郵便番号入力フォーム</h1>
+    <form method="post" action="/input">
+    <!-- ポイント：th:vlaue -->
+    検索したい郵便番号を入力：
+    <input type="text" name="text1" th:value="${text1_valuie}" />
+    <input type="submit" value="検索" />
+    </form>
 </body>
 </html>
