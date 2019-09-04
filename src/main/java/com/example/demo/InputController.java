@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Controller
 public class InputController{
     
+    @Autowired
+    InputService inputService;
+//    ZipCodeDto zipCodeDto;
+    
     @GetMapping("/input")
     public String getInput(){
         return "input";
@@ -19,6 +23,8 @@ public class InputController{
     public String postRequest(@RequestParam("text1") String code, Model model){
         
         System.out.println(code);
+        
+        System.out.println(inputService.service(code));
         
         // 入力フォーマットの確認
 //        if (code == null || code.equals("")) {
